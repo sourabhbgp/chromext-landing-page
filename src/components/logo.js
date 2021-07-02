@@ -11,12 +11,14 @@ export default function Logo() {
         variant: "links.logo",
       }}
     >
-      <Image
-        style={{ width: 150, cursor: "pointer" }}
-        src={logo}
-        sx={{ display: "flex" }}
-        alt="startup landing logo"
-      />
+      <a style={{ cursor: "pointer" }}>
+        <Image
+          style={{ width: 150 }}
+          src={logo}
+          sx={{ display: "flex" }}
+          alt="startup landing logo"
+        />
+      </a>
     </Link>
   );
 }
