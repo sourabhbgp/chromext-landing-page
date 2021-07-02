@@ -11,11 +11,11 @@ import { StickyProvider } from "contexts/app/app.provider";
 import theme from "theme";
 
 export default function CustomApp({ Component, pageProps }) {
-  useEffect(() => {
-    initGA();
-    logPageView();
-    Router.events.on("routeChangeComplete", logPageView);
-  }, []);
+  // useEffect(() => {
+  //   initGA();
+  //   logPageView();
+  //   Router.events.on("routeChangeComplete", logPageView);
+  // }, []);
 
   return (
     <ThemeProvider theme={theme}>

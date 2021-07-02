@@ -12,7 +12,7 @@ export default function Logo() {
       }}
     >
       <Image
-        style={{ width: 150 }}
+        style={{ width: 150, cursor: "pointer" }}
         src={logo}
         sx={{ display: "flex" }}
         alt="startup landing logo"

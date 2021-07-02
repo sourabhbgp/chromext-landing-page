@@ -15,7 +15,7 @@ const Banner = () => {
       <Container sx={styles.container}>
         <Grid sx={styles.grid}>
           <Box sx={styles.content}>
-            <Heading as="h3">
+            <Heading as="h1">
               Fastest Growing Shopping Extension in India
             </Heading>
             <Text as="p">
@@ -73,13 +73,17 @@ export default Banner;
 
 const styles = {
   banner: {
-    pt: ["110px", null, null, null, "150px", "200px"],
-    pb: ["50px", null, null, null, "60px", null, "0"],
+    pt: ["110px", null, null, null, "150px", "200px", "200px"],
+    pb: ["50px", null, null, null, "60px", null, "0", "0"],
     backgroundColor: "#F6F8FB",
     overflow: "hidden",
   },
   container: {
-    width: [null, null, null, null, null, null, "1390px"],
+    // width: [null, null, null, null, null, null, null, "1390px"],
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: ["column", null, null, "row"],
   },
   grid: {
     display: "grid",
@@ -87,7 +91,7 @@ const styles = {
     gridGap: "0",
   },
   content: {
-    h3: {
+    h1: {
       color: "black",
       fontWeight: "bold",
       lineHeight: [1.39],
@@ -95,7 +99,7 @@ const styles = {
       mb: ["15px", null, null, null, "20px"],
       width: ["100%"],
       maxWidth: ["100%", null, null, "90%", "100%", "540px"],
-      fontSize: [6, null, null, "36px", null, "55px", 9],
+      fontSize: [6, null, null, null, "36px", null, "50px", 9],
     },
     p: {
       fontSize: [1, null, null, 2, null, 3],
@@ -147,7 +151,7 @@ const styles = {
       mixBlendMode: "darken",
       position: "relative",
       top: ["0", null, null, null, null, null],
-      maxWidth: ["100%", null, null, null, null, null, "none"],
+      maxWidth: ["100%", null, null, null, null, null, null],
       ml: ["0", "0", null, null, null, "40px"],
     },
   },

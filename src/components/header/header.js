@@ -2,9 +2,10 @@
 import { jsx, Container, Flex, Button, Box } from "theme-ui";
 import { keyframes } from "@emotion/core";
 import { IoIosUnlock } from "react-icons/io";
-import { NavLink, Link } from "components/link";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+// import { NavLink, Link } from "components/link";
+// import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Logo from "components/logo";
+import Link from "next/link";
 
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobileDrawer";
@@ -18,7 +19,7 @@ export default function Header({ className }) {
           <Logo />
 
           <Flex as="nav" sx={styles.nav}>
-            {menuItems.map(({ path, label }, i) => (
+            {/* {menuItems.map(({ path, label }, i) => (
               <ScrollLink
                 activeClass="active"
                 sx={styles.nav.navLink}
@@ -31,7 +32,18 @@ export default function Header({ className }) {
               >
                 {label}
               </ScrollLink>
-            ))}
+            ))} */}
+            <Link href="/">
+              <a style={styles.nav.navLink}>Home</a>
+            </Link>
+
+            <Link href="/autobuy-flash-sale/">
+              <a style={styles.nav.navLink}>Flash Sale</a>
+            </Link>
+
+            <Link href="/contact/">
+              <a style={styles.nav.navLink}>Contact Us</a>
+            </Link>
 
             <a
               style={styles.nav.navLink}
@@ -107,15 +119,16 @@ const styles = {
       display: "none",
     },
     navLink: {
+      textDecoration: "none",
       fontSize: "16px",
       color: "#02073E",
       fontWeight: "400",
       cursor: "pointer",
       lineHeight: "1.2",
-      mr: "48px",
+      marginRight: "48px",
       transition: "500ms",
       ":lastChild": {
-        mr: "0",
+        marginRight: "0",
       },
       "&:hover, &.active": {
         color: "primary",

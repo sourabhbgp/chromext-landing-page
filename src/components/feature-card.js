@@ -59,7 +59,10 @@ const styles = {
       fontWeight: "bold",
       fontSize: ["18px", null, "17px", null, 3],
       lineHeight: [1.55],
+
       a: {
+        color: "black",
+        textDecoration: "none",
         transition: "500ms",
         "&:hover": {
           color: "primary",

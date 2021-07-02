@@ -6,13 +6,50 @@ export const AccordionButton = ({ children, ...rest }) => (
   <div
     css={{
       display: "flex",
-      justifyContent: "space-between",
-      color: "#0F2137",
+      alignItems: "center",
+      letterSpacing: "-0.2px",
       cursor: "pointer",
+      fontSize: "17px",
+      lineHeight: 1.5,
+      fontWeight: "500",
       border: "none",
+      paddingTop: "10px",
+      paddingBottom: "10px",
+      paddingLeft: "15px",
+      paddingRight: "30px",
+      position: "relative",
+      color: "#0F2137",
+      "@media(min-width: 768px)": {
+        paddingLeft: "30px",
+        paddingRight: "30px",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        fontSize: "15px",
+      },
+
       ":focus": {
         outline: "none",
         backgroundColor: "rgba(255, 255, 255, 0.4)",
+      },
+      span: {
+        position: "absolute",
+        top: "50%",
+        right: "20px",
+        transform: "translateY(-50%)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "50%",
+        color: "#fff",
+        "@media(min-width: 768px)": {
+          right: "30px",
+        },
+        img: {
+          width: "7px",
+          "@media(min-width: 768px)": {
+            width: "auto",
+          },
+        },
       },
     }}
     {...rest}
@@ -25,9 +62,12 @@ const variants = {
   open: {
     // maxHeight: 200,
     height: "auto",
-    marginTop: 25,
+    marginBottom: 10,
+    "@media(min-width: 768px)": {
+      marginBottom: 30,
+    },
   },
-  closed: { height: 0, marginTop: 0 },
+  closed: { height: 0, marginTop: 0, marginBottom: 0 },
 };
 export function AccordionContents({ isOpen, ...props }) {
   return (
@@ -37,10 +77,14 @@ export function AccordionContents({ isOpen, ...props }) {
       variants={variants}
       css={{
         overflowY: "hidden",
-        textAlign: "justify",
         fontSize: 15,
-        lineHeight: "32px",
+        padding: "0 15px",
+        paddingRight: "40px",
+        lineHeight: "30px",
         color: "#343D48",
+        "@media(min-width: 768px)": {
+          padding: "0 30px",
+        },
       }}
       {...props}
     />
@@ -50,11 +94,10 @@ export function AccordionContents({ isOpen, ...props }) {
 export const AccordionItem = ({ isOpen, children, ...rest }) => (
   <div
     css={{
-      boxShadow: isOpen ? "0px 9px 30px rgba(69, 88, 157, 0.08)" : "unset",
-      backgroundColor: isOpen ? "#FFF" : "#F6F8FB",
-      borderRadius: 10,
-      marginBottom: 20,
-      padding: 25,
+      borderRadius: 5,
+      marginBottom: 10,
+      border: "1px solid #EDEFF2",
+      padding: 0,
       overflow: "hidden",
     }}
     {...rest}

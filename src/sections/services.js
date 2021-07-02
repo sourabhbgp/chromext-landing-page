@@ -71,7 +71,7 @@ export default Services;
 
 const styles = {
   services: {
-    pt: ["80px", null, null, null, null, null, "140px"],
+    pt: ["80px", null, null, null, null, null, null, "140px"],
     ".service-card:nth-of-type(2)": {
       ".service-icon": {
         backgroundImage:
@@ -96,12 +96,13 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridGap: ["30px", null, null, null, null, "60px"],
+    gridGap: ["30px", null, null, null, null, null, null, "60px"],
     gridTemplateColumns: [
       "1fr",
       null,
       null,
       "1fr 1fr",
+      null,
       null,
       "1fr 1fr 1fr 1fr",
     ],
@@ -134,8 +135,8 @@ const styles = {
       fontSize: [0, null, null, "15px"],
       color: "heading_secondary",
       width: "100%",
-      maxWidth: [null, null, null, null, "84%", "100%"],
-      mx: [null, null, null, null, "auto", "0"],
+      maxWidth: [null, null, null, null, null, "84%", "100%"],
+      mx: [null, null, null, null, null, "auto", "0"],
     },
   },
 };
