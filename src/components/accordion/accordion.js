@@ -11,6 +11,7 @@ import {
   preventClose,
   combineReducers,
 } from "./shared";
+import ReactHtmlParser from "react-html-parser";
 
 export default function Accordion({ items, ...props }) {
   const openIcon = <Image src={accordionIconOpen} alt="open icon" />;
@@ -34,7 +35,7 @@ export default function Accordion({ items, ...props }) {
                 {item.title}
               </AccordionButton>
               <AccordionContents isOpen={openIndexes.includes(index)}>
-                {item.contents}
+                {ReactHtmlParser(item.contents)}
               </AccordionContents>
             </AccordionItem>
           ))}

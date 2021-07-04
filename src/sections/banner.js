@@ -3,9 +3,9 @@ import { Box, Container, Grid, Button, Input, Heading, Text } from "theme-ui";
 
 import Image from "components/image";
 import { IoLogoChrome } from "react-icons/io";
-import img1 from "assets/partner-1-1.png";
-import img2 from "assets/partner-1-2.png";
-import img3 from "assets/partner-1-3.png";
+// import img1 from "assets/partner-1-1.png";
+// import img2 from "assets/partner-1-2.png";
+// import img3 from "assets/partner-1-3.png";
 
 import bannerImg from "assets/landing-banner2.svg";
 

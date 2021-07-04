@@ -8,11 +8,11 @@ import Partner from "assets/partners.png";
 const data = {
   subTitle: "Sites Covered",
   title:
-    "Amazon, Flipkart ,Sony like many popular sites covered in Flash Sale Extension",
+    "Amazon, Flipkart, Sony & Other Popular Sites Covered in Flash Sale Extension",
   description:
-    "Almost all flash sale covered from all the popular ecommerce sites, if any particular site is not listed message us, we will list that too in few days.",
+    "Almost all flash sales covered from all the popular eCommerce sites. If any particular site is not listed message us. We will list that with a working script in a few days",
   btnName: "Download Now",
-  btnURL: "#",
+  btnURL: "https://bit.ly/3AsdIlK",
 };
 
 export default function PartnerSection() {

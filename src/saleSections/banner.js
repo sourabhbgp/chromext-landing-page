@@ -9,31 +9,15 @@ import {
 } from "react-icons/io";
 import Image from "components/image";
 
-import CoreFeatureThumb from "assets/131.png";
+import CoreFeatureThumb from "assets/flash-sale-chromext.png";
 import Briefcase from "assets/core-feature/briefcase.svg";
 import Secure from "assets/core-feature/secure.svg";
 
 const data = {
   subTitle: "Flash Sale",
-  title: "Flash Sale Extension to autobuy any product in seconds",
+  title: "Flash Sale Extension to Autobuy Products in Seconds",
   description:
     "Get your tests delivered at let home collect sample from the victory of the managements that",
-  features: [
-    // {
-    //   id: 1,
-    //   imgSrc: Briefcase,
-    //   altText: "Smart Features",
-    //   title: "Smart Features",
-    //   text: "Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.",
-    // },
-    // {
-    //   id: 2,
-    //   imgSrc: Secure,
-    //   altText: "Secure Contents",
-    //   title: "Secure Contents",
-    //   text: "Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.",
-    // },
-  ],
 };
 
 export default function CoreFeature() {
@@ -41,7 +25,7 @@ export default function CoreFeature() {
     <section sx={styles.coreFeature}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
-          <Image src={CoreFeatureThumb} alt="Thumbnail" />
+          <Image src={CoreFeatureThumb} alt="Flash Sale Extension" />
         </Box>
         <Box sx={styles.contentBox}>
           <Box sx={styles.headingTop}>
@@ -49,20 +33,6 @@ export default function CoreFeature() {
           </Box>
 
           <Grid gap="15px 0" columns={1} sx={styles.grid}>
-            {/* {data.features.map((item) => (
-              <Box sx={styles.card} key={item.id}>
-                <Image src={item.imgSrc} alt={item.altText} sx={styles.img} />
-
-                <Box sx={styles.wrapper}>
-                  <Heading sx={styles.wrapper.title}>{item.title}</Heading>
-                  <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
-                </Box>
-              </Box>
-            ))} */}
-            {/* 
-            <Text as="p" className="description" sx={styles.description}>
-              {data.description}
-            </Text> */}
             <Box as="ul" sx={styles.list}>
               <Text as="li">
                 <IoIosCheckmarkCircle style={{ color: "#0d9896" }} />
@@ -80,6 +50,10 @@ export default function CoreFeature() {
                 <IoIosCheckmarkCircle style={{ color: "#0d9896" }} />
                 Highly Safe and Secure
               </Text>
+              <Text as="li">
+                <IoIosCheckmarkCircle style={{ color: "#0d9896" }} />
+                Easy to Use UI
+              </Text>
             </Box>
             <div style={{ display: "flex" }}>
               <Button
@@ -90,7 +64,7 @@ export default function CoreFeature() {
                   width: "fit-content",
                 }}
                 sx={styles.button}
-                // href="https://bit.ly/3gHjXKr"
+                href="https://bit.ly/3AtSUuc"
                 target="_blank"
               >
                 <IoLogoChrome style={{ fontSize: 24, marginRight: 8 }} /> ADD TO
@@ -105,7 +79,7 @@ export default function CoreFeature() {
                   width: "fit-content",
                 }}
                 sx={styles.button2}
-                // href="https://bit.ly/3gHjXKr"
+                href="https://bit.ly/3AtSUuc"
                 target="_blank"
                 disabled
               >
@@ -150,6 +124,7 @@ const styles = {
     pl: [0, 5, 0, null, 7, 95],
     pr: [0, 5, null, null, null, 75, 95],
     order: [2, null, null, 0],
+    pb: [0, 5, 0, null, "50px", "50px"],
   },
   contentBox: {
     width: ["100%", 450, 550, 350, 480, 520],

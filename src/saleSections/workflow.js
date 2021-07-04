@@ -24,7 +24,7 @@ const data = [
   },
   {
     id: 4,
-    title: "Do the Payment",
+    title: "Make the Payment",
     text: "We will add the product to cart, You have to do the payment in 5-10 min, after that product will become out of stock or removed",
   },
 ];

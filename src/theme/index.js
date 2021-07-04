@@ -213,6 +213,7 @@ export default {
     },
     logo: {
       display: "flex",
+      cursor: "pointer",
     },
   },
   images: {
