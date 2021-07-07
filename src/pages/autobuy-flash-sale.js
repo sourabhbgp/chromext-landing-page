@@ -8,7 +8,7 @@ const FlashSale = () => {
   return (
     <>
       <NextSeo
-        title="Flash Sale Extension to Autobuy Products in Seconds - ChromeXT"
+        title="ChromeXT - AutoBuy Flash Sale Extension"
         description="Use this Flash Sale Extension to autobuy any product in Amazon, Flipkart, MI or any other sites in seconds."
       />
       <Banner />
