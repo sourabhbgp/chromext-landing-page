@@ -72,19 +72,18 @@ export default function CoreFeature() {
               </Button>
 
               <Button
-                as="button"
+                as="a"
                 style={{
                   display: "flex",
                   alignItems: "center",
                   width: "fit-content",
                 }}
                 sx={styles.button2}
-                href="https://bit.ly/3AtSUuc"
+                href="https://youtu.be/jxXM3NJO37M"
                 target="_blank"
-                disabled
               >
                 <IoIosPlayCircle style={{ fontSize: 24, marginRight: 8 }} />
-                Soon
+                Watch
               </Button>
             </div>
           </Grid>
@@ -245,9 +244,9 @@ const styles = {
     ml: "16px",
     border: "1px solid",
     borderColor: "#999999",
-    opacity: 0.7,
-    "&:hover": {
-      boxShadow: "none",
-    },
+    // opacity: 0.7,
+    // "&:hover": {
+    //   boxShadow: "none",
+    // },
   },
 };
