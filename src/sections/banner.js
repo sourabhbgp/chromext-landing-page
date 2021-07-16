@@ -16,7 +16,7 @@ const Banner = () => {
         <Grid sx={styles.grid}>
           <Box sx={styles.content}>
             <Heading as="h1">
-              Fastest Growing Shopping Extension in India
+              All in one ChromeXT Extension for all your Shopping needs
             </Heading>
             <Text as="p">
               We help online shoppers to be ahead of others during Flash Sale
@@ -99,7 +99,7 @@ const styles = {
       mb: ["15px", null, null, null, "20px"],
       width: ["100%"],
       maxWidth: ["100%", null, null, "90%", "100%", "540px"],
-      fontSize: [6, null, null, null, "36px", null, "50px", 9],
+      fontSize: [6, null, null, null, "36px", null, "45px", 9],
     },
     p: {
       fontSize: [1, null, null, 2, null, 3],
