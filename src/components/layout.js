@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import { jsx } from 'theme-ui';
 import React, { useCallback } from 'react';
 import Sticky from 'react-stickynode';
@@ -30,7 +29,9 @@ export default function Layout({ children }) {
   return (
     <React.Fragment>
       <Sticky enabled={isSticky} innerZ={1000}>
-        <Header className={`${isSticky ? 'sticky' : 'unSticky'}`} />
+        <div>
+          <Header className={`${isSticky ? 'sticky' : 'unSticky'}`} />
+        </div>
       </Sticky>
       <Waypoint
         onEnter={removeSticky}

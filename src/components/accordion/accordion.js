@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "theme-ui";
+import Image from "components/image";
 import { BaseAccordion } from "./base-accordion";
 import accordionIconClose from "assets/accordion-arrow.svg";
 import accordionIconOpen from "assets/accordion-arrow-e.svg";

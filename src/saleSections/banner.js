@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import { jsx, Container, Box, Grid, Text, Heading, Button } from "theme-ui";
 import TextFeature from "components/text-feature";
 import {

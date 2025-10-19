@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import { jsx, Box, Text, Container } from "theme-ui";
 import { Link } from "components/link";
 import Logo from "components/logo";

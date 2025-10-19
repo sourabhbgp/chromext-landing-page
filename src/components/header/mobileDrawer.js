@@ -1,33 +1,18 @@
 import React, { useContext } from "react";
 import { Button, Box } from "theme-ui";
-import { Scrollbars } from "react-custom-scrollbars";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import Drawer from "components/drawer";
 import { DrawerContext } from "contexts/drawer/drawer.context";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 import { Link } from "components/link";
-import { Facebook, Twitter, Github, Dribbble } from "components/customIcon";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import menuItems from "./header.data";
 import Logo from "components/logo";
-import LogoDark from "assets/logo.svg";
+import NextLink from "next/link";
 
-const social = [
-  {
-    path: "/",
-    icon: <Facebook />,
-  },
-  {
-    path: "/",
-    icon: <Twitter />,
-  },
-  {
-    path: "/",
-    icon: <Github />,
-  },
-  {
-    path: "/",
-    icon: <Dribbble />,
-  },
+const menuItems = [
+  { path: "/", label: "Home" },
+  { path: "/autobuy-flash-sale/", label: "Flash Sale" },
+  { path: "/contact/", label: "Contact Us" },
+  { path: "/privacy-policy/", label: "Privacy Policy" },
 ];
 
 const MobileDrawer = () => {
@@ -56,25 +41,13 @@ const MobileDrawer = () => {
     >
       <Scrollbars autoHide>
         <Box sx={styles.content}>
-          <Logo src={LogoDark} />
+          <Logo />
           <Box sx={styles.menu}>
             {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={10}
-                duration={500}
-                key={i}
-              >
+              <NextLink key={i} href={path} style={{ textDecoration: 'none', color: 'inherit' }}>
                 {label}
-              </ScrollLink>
+              </NextLink>
             ))}
-
-            <a href={"https://www.chromext.app/blog/"} target="_blank">
-              Blog
-            </a>
           </Box>
 
           {/* <Box sx={styles.menuFooter}>

@@ -1,12 +1,7 @@
-const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
-
-const nextConfiguration = {
-  target: "serverless", //will output independent pages that don't require a monolithic server. It's only compatible with next start or Serverless deployment platforms (like ZEIT Now) — you cannot use the custom server API.
-};
-
-module.exports = withPlugins([optimizedImages], {
-  ...nextConfiguration,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Note: 'target' option has been removed in Next.js 12+
+  // Serverless is now the default for most deployment platforms
 
   async redirects() {
     return [
@@ -34,4 +29,13 @@ module.exports = withPlugins([optimizedImages], {
   },
 
   trailingSlash: true,
-});
+
+  // Next.js 14 built-in image optimization
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+};
+
+module.exports = nextConfig;

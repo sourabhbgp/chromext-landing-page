@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SwiperCore, { Thumbs, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Thumbs, Autoplay } from "swiper/modules";
 import { Box, Container, Text, Heading } from "theme-ui";
 import BlockTitle from "components/block-title";
 import Image from "components/image";
@@ -8,8 +8,6 @@ import Image from "components/image";
 import img1 from "assets/user2.png";
 import img2 from "assets/user3.jpeg";
 import img3 from "assets/user1.jpeg";
-
-SwiperCore.use([Thumbs, Autoplay]);
 
 const TESTIMONIALS_DATA = [
   {
@@ -86,6 +84,7 @@ const Testimonials = () => {
         <Swiper
           id="testimonialsContent"
           thumbs={{ swiper: thumbsSwiper }}
+          modules={[Thumbs, Autoplay]}
           {...contentParams}
         >
           {TESTIMONIALS_DATA.map((testimonialText, index) => (
@@ -100,8 +99,8 @@ const Testimonials = () => {
         <Swiper
           id="testimonialsInfo"
           onSwiper={setThumbsSwiper}
-          watchSlidesVisibility
           watchSlidesProgress
+          modules={[Thumbs, Autoplay]}
           {...infoParams}
         >
           {TESTIMONIALS_DATA.map((testimonial, index) => (

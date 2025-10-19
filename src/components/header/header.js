@@ -1,15 +1,9 @@
-/** @jsx jsx */
-import { jsx, Container, Flex, Button, Box } from "theme-ui";
-import { keyframes } from "@emotion/core";
-import { IoIosUnlock } from "react-icons/io";
-// import { NavLink, Link } from "components/link";
-// import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { jsx, Container, Flex, Box } from "theme-ui";
 import Logo from "components/logo";
 import Link from "next/link";
 
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobileDrawer";
-import menuItems from "./header.data";
 
 export default function Header({ className }) {
   return (
@@ -19,39 +13,21 @@ export default function Header({ className }) {
           <Logo />
 
           <Flex as="nav" sx={styles.nav}>
-            {/* {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                sx={styles.nav.navLink}
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={i}
-              >
-                {label}
-              </ScrollLink>
-            ))} */}
-            <Link href="/">
-              <a style={styles.nav.navLink}>Home</a>
+            <Link href="/" style={styles.nav.navLink}>
+              Home
             </Link>
 
-            <Link href="/autobuy-flash-sale/">
-              <a style={styles.nav.navLink}>Flash Sale</a>
+            <Link href="/autobuy-flash-sale/" style={styles.nav.navLink}>
+              Flash Sale
             </Link>
 
-            <Link href="/contact/">
-              <a style={styles.nav.navLink}>Contact Us</a>
+            <Link href="/contact/" style={styles.nav.navLink}>
+              Contact Us
             </Link>
 
-            <a
-              style={styles.nav.navLink}
-              href={"https://www.chromext.app/blog/"}
-              target="_blank"
-            >
-              Blog
-            </a>
+            <Link href="/privacy-policy/" style={styles.nav.navLink}>
+              Privacy Policy
+            </Link>
           </Flex>
 
           {/* <Link
